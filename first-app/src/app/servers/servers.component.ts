@@ -30,7 +30,7 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
 
-  onUserNameUpdate(event:Event) {
+  onUserNameUpdate(event: Event) {
     if ((<HTMLInputElement>event.target).value.length > 0) {
       this.userValid = true;
     } else {
