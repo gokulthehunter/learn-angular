@@ -8,6 +8,7 @@ import { ServersComponent } from './servers/servers.component';
 import { WarningAlertComponent } from './warning/warning.component';
 import { SuccessComponent } from './success/success.component';
 import { DangerComponent } from './danger/danger.component';
+import { TaskDirectives } from './task-directives/task-directives.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { DangerComponent } from './danger/danger.component';
     ServersComponent,
     WarningAlertComponent,
     SuccessComponent,
-    DangerComponent
+    DangerComponent,
+    TaskDirectives
   ],
   imports: [
     BrowserModule,

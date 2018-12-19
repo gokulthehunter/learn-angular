@@ -8,8 +8,7 @@
 <!-- <p>{{ serverCreationStatus }}</p> -->
 <p *ngIf="serverCreated">Server Was Created, Server Name is {{ serverName }}</p>
 
-<app-server></app-server>
-<app-server></app-server>
+<app-server *ngFor="let server of servers"></app-server>
 
 <!-- user name task-->
 <hr>

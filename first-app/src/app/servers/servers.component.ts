@@ -10,6 +10,7 @@ export class ServersComponent implements OnInit {
   serverCreationStatus: string = "no server was created !";
   serverName: string = 'Test Server';
   serverCreated: boolean = false;
+  servers = ['test server 1','test server 2'];
   // userName: string = '';
   // userValid: boolean = false;
   constructor() {
@@ -25,12 +26,15 @@ export class ServersComponent implements OnInit {
 
   onCreateServer() {
     this.serverCreated = true;
+    this.servers.push(this.serverName);
     this.serverCreationStatus = "server was Created ! name is " + this.serverName;
   }
 
   onUpdateServerName(event: Event) {
     this.serverName = (<HTMLInputElement>event.target).value;
   }
+
+
 
   // onUserNameUpdate(event: Event) {
   //   if ((<HTMLInputElement>event.target).value.length > 0) {

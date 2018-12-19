@@ -1,0 +1,7 @@
+<h1>Task Directives</h1>
+<br/>
+<button type="button" class="btn btn-primary" (click)="stateShow()">Display Details</button>
+<p *ngIf="!statePara">Serect Password = tuna</p>
+<h2>Click Status</h2>
+<p *ngFor="let log of clickLog" [ngStyle]="{'background-color':countCheck()}">{{log}}</p>
+<div style="height:100px"></div>
