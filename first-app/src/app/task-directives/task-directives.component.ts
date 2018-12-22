@@ -9,17 +9,21 @@ import {Component} from '@angular/core';
 export class TaskDirectives  {
     statePara:boolean = true;
     clickLog = [];
-    count:number = 0;
+    count: number = 0;
+    overState: boolean = false;
     constructor() {
     }
     stateShow(){
         this.statePara = this.statePara ? false : true;
-        this.clickLog.push("cliked "+ (this.count++))
+        // this.clickLog.push((this.count++) + 1);
+        // time stamping
+        this.clickLog.push(new Date());
     }
     countCheck(){
         console.log(this.count)
-        if (this.clickLog.length > 5){
-            return "blue";
+        if (this.clickLog.length > 5) {
+            this.overState = true;
+            return this.overState === true ? 'blue' : 'unset';
         }
     }
 }
