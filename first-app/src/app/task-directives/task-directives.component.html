@@ -8,6 +8,7 @@
 [ngStyle]="{'background-color': log >= 5 ? 'blue' : 'unset'}" 
 [ngClass]="{'exceed' : log >= 5}">{{log}}</p> -->
 
+<!-- time stamping -->
 <p *ngFor="let log of clickLog; let i = index" 
 [ngStyle]="{'background-color': i >= 5 ? 'blue' : 'unset'}" 
 [ngClass]="{'exceed' : i >= 5}">{{log}}</p>
